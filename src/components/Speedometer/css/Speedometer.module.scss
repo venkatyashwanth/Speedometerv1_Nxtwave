@@ -1,0 +1,117 @@
+@import "../../../scss/base";
+
+.appBg {
+    background-color: $blackColor;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .appContent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .heading {
+            font-family: "Roboto", sans-serif;
+            font-size: 3.6rem;
+            font-style: italic;
+            font-weight: 500;
+            color: $whiteColor;
+            text-transform: uppercase;
+            margin: 1.2rem 0;
+        }
+
+        .imageWrapper {
+            width: 40%;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .speedDisplay {
+            color: $whiteColor;
+            font-family: "Roboto", sans-serif;
+            text-align: center;
+
+            p {
+                font-size: 2.4rem;
+                color: $whiteColor;
+                margin: 1.2rem 0;
+            }
+
+            span {
+                font-size: 1.6rem;
+                color: $darkColor1;
+            }
+
+            .brakesContainer {
+                margin-top: 1.2rem;
+                button {
+                    padding: 1.2rem 1.6rem;
+                    border-radius: 8px;
+                    border: 0;
+                    cursor: pointer;
+                    overflow: hidden;
+                }
+
+                button:first-child {
+                    background-color: $blueColor;
+                    margin-right: 1.6rem;
+                    color: $darkColor1;
+                }
+
+                button:nth-child(2) {
+                    background-color: transparent;
+                    border: 1px solid $darkColor2;
+                    color: $darkColor1;
+                }
+                .btnElements:first-child{
+                    &:active{
+                        background-color: green;
+                    }
+                }
+                .btnElements:nth-child(2){
+                    &:active{
+                        background-color: red;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767.5px){
+    .appBg{
+        .appContent{
+            .heading{
+                font-size: 2.8rem;
+            }
+            .imageWrapper{
+                width: 80%;
+            }
+            .speedDisplay{
+                p{
+                    font-size: 1.8rem;
+                }
+                span{
+                    font-size: 1.2rem;
+                }
+                .brakesContainer{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    button{
+                        padding: .8rem;
+                        border-radius: .8rem;
+                    }
+                    button:first-child{
+                        margin-right: 0;
+                        margin-bottom: 1.2rem;
+                    }
+                }
+            }
+        }
+    }
+}
